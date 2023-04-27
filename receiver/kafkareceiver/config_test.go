@@ -42,11 +42,12 @@ func TestLoadConfig(t *testing.T) {
 		{
 			id: component.NewIDWithName(typeStr, ""),
 			expected: &Config{
-				Topic:    "spans",
-				Encoding: "otlp_proto",
-				Brokers:  []string{"foo:123", "bar:456"},
-				ClientID: "otel-collector",
-				GroupID:  "otel-collector",
+				Topic:         "spans",
+				Encoding:      "otlp_proto",
+				Brokers:       []string{"foo:123", "bar:456"},
+				ClientID:      "otel-collector",
+				GroupID:       "otel-collector",
+				InitialOffset: "latest",
 				Authentication: kafkaexporter.Authentication{
 					TLS: &configtls.TLSClientSetting{
 						TLSSetting: configtls.TLSSetting{
@@ -73,11 +74,12 @@ func TestLoadConfig(t *testing.T) {
 
 			id: component.NewIDWithName(typeStr, "logs"),
 			expected: &Config{
-				Topic:    "logs",
-				Encoding: "direct",
-				Brokers:  []string{"coffee:123", "foobar:456"},
-				ClientID: "otel-collector",
-				GroupID:  "otel-collector",
+				Topic:         "logs",
+				Encoding:      "direct",
+				Brokers:       []string{"coffee:123", "foobar:456"},
+				ClientID:      "otel-collector",
+				GroupID:       "otel-collector",
+				InitialOffset: "earliest",
 				Authentication: kafkaexporter.Authentication{
 					TLS: &configtls.TLSClientSetting{
 						TLSSetting: configtls.TLSSetting{
