@@ -74,8 +74,8 @@ type Config struct {
 }
 
 const (
-	OffsetLatest   string = "latest"
-	OffsetEarliest string = "earliest"
+	offsetLatest   string = "latest"
+	offsetEarliest string = "earliest"
 )
 
 var _ component.Config = (*Config)(nil)

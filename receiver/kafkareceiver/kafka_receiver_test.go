@@ -809,14 +809,14 @@ func TestLogsConsumerGroupHandler_error_nextConsumer(t *testing.T) {
 }
 
 func TestToSaramaInitialOffset_earliest(t *testing.T) {
-	saramaInitialOffset, err := toSaramaInitialOffset(OffsetEarliest)
+	saramaInitialOffset, err := toSaramaInitialOffset(offsetEarliest)
 
 	require.NoError(t, err)
 	assert.Equal(t, sarama.OffsetOldest, saramaInitialOffset)
 }
 
 func TestToSaramaInitialOffset_latest(t *testing.T) {
-	saramaInitialOffset, err := toSaramaInitialOffset(OffsetLatest)
+	saramaInitialOffset, err := toSaramaInitialOffset(offsetLatest)
 
 	require.NoError(t, err)
 	assert.Equal(t, sarama.OffsetNewest, saramaInitialOffset)

@@ -645,9 +645,9 @@ func (c *logsConsumerGroupHandler) ConsumeClaim(session sarama.ConsumerGroupSess
 
 func toSaramaInitialOffset(initialOffset string) (int64, error) {
 	switch initialOffset {
-	case OffsetEarliest:
+	case offsetEarliest:
 		return sarama.OffsetOldest, nil
-	case OffsetLatest:
+	case offsetLatest:
 		fallthrough
 	case "":
 		return sarama.OffsetNewest, nil

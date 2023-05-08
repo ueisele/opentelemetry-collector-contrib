@@ -35,7 +35,7 @@ const (
 	defaultBroker        = "localhost:9092"
 	defaultClientID      = "otel-collector"
 	defaultGroupID       = defaultClientID
-	defaultInitialOffset = OffsetLatest
+	defaultInitialOffset = offsetLatest
 
 	// default from sarama.NewConfig()
 	defaultMetadataRetryMax = 3
