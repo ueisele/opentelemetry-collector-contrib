@@ -1,4 +1,4 @@
-module github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver
+module github.com/ueisele/opentelemetry-collector-contrib/receiver/kafkareceiver
 
 go 1.19
 

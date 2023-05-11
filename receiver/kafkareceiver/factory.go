@@ -24,7 +24,7 @@ import (
 	"go.opentelemetry.io/collector/receiver"
 
 	"github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter"
-	"github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver/internal/metadata"
+	"github.com/ueisele/opentelemetry-collector-contrib/receiver/kafkareceiver/internal/metadata"
 )
 
 const (
